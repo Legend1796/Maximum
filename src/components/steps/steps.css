@@ -1,0 +1,65 @@
+.steps__container {
+    width: 1375px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.steps__road {
+    width: 1100px;
+    position: absolute;
+    bottom: 20px;
+    left: 120px;
+    z-index: -1;
+}
+
+.steps__title {
+    text-align: left;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 165%;
+    color: var(--color-black);
+}
+
+.steps__grid-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 140px;
+}
+
+.steps__step {
+    width: 306px;
+    list-style: none;
+}
+
+.steps__step-title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.steps__step-text {
+    width: 194px;
+    text-align: left;
+    margin-left: 16px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 150%;
+    color: var(--color-grey);
+}
+
+.steps__step-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #FAFAFA;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.steps__number {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    color: var(--color-blue);
+}
