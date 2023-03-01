@@ -1,0 +1,32 @@
+.header__container {
+    width: 1375px;
+    margin: 48px auto 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-black);
+}
+
+.header__links {
+    display: flex;
+    gap: 48px;
+}
+
+.header__link {
+    list-style: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.header__contacts {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.header__phone {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
