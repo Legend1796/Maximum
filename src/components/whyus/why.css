@@ -1,0 +1,46 @@
+.container {
+    margin: 108px auto;
+    width: 1375px;
+}
+
+.why__title {
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 165%;
+    text-align: left;
+    color: #282828;
+}
+
+.why__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.why__item {
+    list-style: none;
+    text-align: left;
+}
+
+.why__item-title {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 150%;
+    color: var(--color-black);
+}
+
+.why__item-title::before {
+    content: "\2022";
+    color: var(--color-blue);
+    font-weight: 900;
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.why__item-text {
+    width: 453px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-grey);
+}
