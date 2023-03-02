@@ -4,7 +4,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--color-black);
 }
 
 .header__links {
@@ -13,10 +12,12 @@
 }
 
 .header__link {
+    text-decoration: none;
     list-style: none;
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
+    color: var(--color-black);
 }
 
 .header__contacts {
@@ -29,4 +30,5 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+    color: var(--color-black);
 }

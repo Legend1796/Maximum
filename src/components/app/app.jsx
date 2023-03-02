@@ -1,4 +1,5 @@
 import About from "../about/about";
+import Copyright from "../copyright/copyright";
 import Footer from "../footer/footer";
 import Form from "../form/form";
 import Header from "../header/header";
@@ -17,6 +18,7 @@ function App() {
       <Why />
       <Form />
       <Footer />
+      <Copyright />
     </div>
   );
 }

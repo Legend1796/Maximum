@@ -1,0 +1,18 @@
+.copyright__container {
+    width: 1375px;
+    margin: 0 auto 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.copyright__logo {
+    margin: 41px auto;
+}
+
+.copyright__link{
+    text-decoration: none;
+    color: var(--color-blue);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
