@@ -13,7 +13,7 @@
     --color-white: #F8F8F8;
 }
 
-body {
+body, button {
     font-family: -apple-system, BlinkMacSystemFont, "Montserrat", "Oxygen", "Ubuntu", "Cantarell", "Segoe UI", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -22,3 +22,17 @@ body {
 code {
     font-family: "source-code-pro", "Menlo", "Monaco", "Consolas", "Courier New", monospace;
 }
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #29ABD3;
+    color: #ffffff;
+}
+
+button:active {
+    background-color: #2FBAE5;
+    box-shadow: inset 3px 4px 4px rgba(0, 0, 0, 0.15);
+  }

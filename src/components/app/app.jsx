@@ -1,4 +1,5 @@
 import About from "../about/about";
+import Form from "../form/form";
 import Header from "../header/header";
 import Promo from "../promo/promo";
 import Steps from "../steps/steps";
@@ -13,6 +14,7 @@ function App() {
       <About />
       <Steps />
       <Why />
+      <Form />
     </div>
   );
 }

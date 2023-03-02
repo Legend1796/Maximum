@@ -29,10 +29,7 @@
     border-radius: 5px;
     background-color: var(--color-blue);
     border: none;
-}
-
-.promo__button:hover {
-    background-color: #29ABD3;
+    cursor: pointer;
 }
 
 .promo__button-text {
