@@ -1,12 +1,12 @@
 import "./steps.css";
-import step1 from "../../images/steps/step1.png";
-import step2 from "../../images/steps/step2.png";
-import step3 from "../../images/steps/step3.png";
-import step4 from "../../images/steps/step4.png";
-import step5 from "../../images/steps/step5.png";
-import step6 from "../../images/steps/step6.png";
-import step7 from "../../images/steps/step7.png";
-import step8 from "../../images/steps/step8.png";
+import step1 from "../../images/steps/step1.svg";
+import step2 from "../../images/steps/step2.svg";
+import step3 from "../../images/steps/step3.svg";
+import step4 from "../../images/steps/step4.svg";
+import step5 from "../../images/steps/step5.svg";
+import step6 from "../../images/steps/step6.svg";
+import step7 from "../../images/steps/step7.svg";
+import step8 from "../../images/steps/step8.svg";
 import road from "../../images/steps/road.svg";
 
 function Steps() {
@@ -14,7 +14,7 @@ function Steps() {
     <section className="steps">
       <div className="steps__container">
         <img src={road} alt="road" className="steps__road" />
-        <h2 className="steps__title">О компании</h2>
+        <h2 className="steps__title">Этапы работы</h2>
         <ul className="steps__grid-table">
           <li className="steps__step">
             <div className="steps__step-title">

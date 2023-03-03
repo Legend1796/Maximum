@@ -1,10 +1,11 @@
 .container {
-    margin: 108px auto;
-    width: 1375px;
+    margin: 115px auto;
+    width: 1370px;
 }
 
 .why__title {
-    margin-bottom: 32px;
+    margin-bottom: 27px;
+    margin-left: 4px;
     font-weight: 600;
     font-size: 40px;
     line-height: 165%;
@@ -15,10 +16,11 @@
 .why__list {
     display: flex;
     justify-content: space-between;
+    gap: 13px;
 }
 
 .why__item {
-    width: 390px;
+    width: 453px;
     list-style: none;
     text-align: left;
 }
@@ -34,8 +36,11 @@
     content: "\2022";
     color: var(--color-blue);
     font-weight: 900;
+    font-size: 37px;
+    line-height: 30px;
     display: inline-block;
-    margin-right: 16px;
+    margin-right: 14px;
+    margin-bottom: 24px;
 }
 
 .why__item-text {

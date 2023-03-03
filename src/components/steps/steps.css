@@ -7,8 +7,8 @@
 .steps__road {
     width: 1100px;
     position: absolute;
-    bottom: 20px;
-    left: 120px;
+    bottom: 45px;
+    left: 135px;
     z-index: -1;
 }
 
@@ -21,9 +21,11 @@
 }
 
 .steps__grid-table {
+    margin-top: 37px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 140px;
+    column-gap: 44px;
+    row-gap: 150px;
 }
 
 .steps__step {
@@ -62,4 +64,8 @@
     font-size: 50px;
     line-height: 61px;
     color: var(--color-blue);
+}
+
+.steps__image {
+ margin-top: 7px;
 }

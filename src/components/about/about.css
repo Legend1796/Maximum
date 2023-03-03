@@ -1,15 +1,19 @@
+.about {
+    margin-top: -30px;
+}
+
 .about__container {
     width: 1375px;
-    margin: -10px auto 120px;
+    margin: 0 auto 118px;
 }
 
 .about__title {
+    margin-bottom: 35px;
     text-align: left;
     font-weight: 600;
     font-size: 40px;
     line-height: 165%;
     color: var(--color-black);
-    margin-left: 0;
 }
 
 .about__text {
@@ -39,6 +43,7 @@
 }
 
 .about__table-column-title {
+    margin-bottom: 9px;
     font-weight: 700;
     font-size: 50px;
     line-height: 61px;
