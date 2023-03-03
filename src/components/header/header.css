@@ -36,3 +36,38 @@
     line-height: 24px;
     color: var(--color-black);
 }
+
+@media screen and (max-width: 1430px) {
+    .header__container {
+        width: 721px;
+        margin: 37px auto 78px;
+    }
+
+    .header__links {
+         gap: 27px;
+    }
+
+    .header__link {
+        height: 40px;
+   }
+
+    .header__image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header__phone {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 140%;
+        margin-left: 9px;
+    }
+
+    .header__contacts {
+        gap: 0;
+    }
+
+    .header__link_wa {
+        margin-right: 16px;
+    }
+  }

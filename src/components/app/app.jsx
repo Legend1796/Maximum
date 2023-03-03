@@ -8,12 +8,27 @@ import Steps from "../steps/steps";
 import Why from "../whyus/why";
 import "./app.css";
 
+import { useState, useEffect } from "react";
+
 function App() {
+  const [pageWidth, setPageWidth] = useState(document.documentElement.scrollWidth);
+
+  window.onresize = newPageSize;
+
+  function newPageSize() {
+    setTimeout(() => {
+      setPageWidth(document.documentElement.scrollWidth);
+    }, 1000);
+  }
+
+  useEffect(() => {
+    console.log(pageWidth);
+  }, [pageWidth]);
   return (
     <div className="App">
-      <Header />
+      <Header pageWidth={pageWidth} />
       <Promo />
-      <About />
+      <About pageWidth={pageWidth} />
       <Steps />
       <Why />
       <Form />

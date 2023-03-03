@@ -28,12 +28,15 @@
 .about__table {
     display: flex;
     justify-content: space-between;
-    /* gap: 10px; */
     margin-top: 76px;
 }
 
 .about__table-column {
     width: 337px;
+    list-style: none;
+}
+
+.about__line {
     list-style: none;
     border-right: 2px solid var(--color-blue);
 }
@@ -55,4 +58,77 @@
     font-size: 20px;
     line-height: 24px;
     color: #000;
+}
+
+@media screen and (max-width: 1430px) {
+    .about {
+        margin-top: 80px;
+    }
+
+    .about__container {
+        width: 721px;
+        margin: 0 auto 118px;
+    }
+    
+    .about__title {
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 165%;
+        margin-bottom: 18px;
+    }
+
+    .about__text {
+        width: 700px;
+        font-size: 20px;
+        line-height: 165%;
+    }
+
+    .about__text_bold {
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 165%;
+    }
+
+    .about__text_semibold {
+        font-weight: 300;
+        font-size: 33px;
+        line-height: 150%;
+    }
+
+    .about__text_regular {
+        width: 700px;
+        font-size: 20px;
+        line-height: 140%;
+        margin-bottom: 3px;
+        margin-top: -2px;
+    }
+
+    .about__table-column-title {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;
+        margin-bottom: 10px;
+    }
+
+    .about__table-column-text{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .about__table {
+        margin-top: 35px;
+        justify-content: start;
+    }
+
+    .about__table-column {
+        padding: 5px 0;
+        width: 171px;
+    }
+
+    .about__line {
+        margin-left: 4px;
+        margin-right: 6px;
+    }
+
 }
