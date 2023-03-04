@@ -67,5 +67,55 @@
 }
 
 .steps__image {
- margin-top: 7px;
+    margin-top: 7px;
+}
+
+@media screen and (max-width: 1430px) {
+    .steps__container {
+        width: 720px;
+    }
+
+    .steps__title {
+        font-size: 25px;
+    }
+
+    .steps__step-circle {
+        width: 55px;
+        height: 55px;
+        border-radius: 30px;
+    }
+
+    .steps__grid-table {
+        margin-top: 16px;
+        column-gap: 6px;
+        /* row-gap: 0px; */
+        row-gap: 150px;
+    }
+
+    .steps__step-text {
+        width: 108px;
+        margin-left: 16px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 142%;
+        margin-left: 8px;
+    }
+
+    .steps__image {
+        margin-top: 14px;
+        width: 171px;
+        height: 171px;
+    }
+
+    .steps__step {
+        width: 171px;
+    }
+
+    .steps__road {
+        width: 693px;
+        height: 503px;
+        bottom: 80px;
+        left: -11px;
+        z-index: -1;
+    }
 }

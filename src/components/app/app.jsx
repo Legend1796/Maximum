@@ -29,7 +29,7 @@ function App() {
       <Header pageWidth={pageWidth} />
       <Promo />
       <About pageWidth={pageWidth} />
-      <Steps />
+      <Steps pageWidth={pageWidth} />
       <Why />
       <Form />
       <Footer />
