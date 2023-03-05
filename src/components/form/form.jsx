@@ -1,15 +1,23 @@
 import "./form.css";
 import checkbox_active from "../../images/checkbox_active.svg";
 import { useFormAndValidation } from "../../hooks/useFormAndValidation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Form() {
-  const { values, handleChange, errors, isValid, resetErrors } = useFormAndValidation({});
+  const { values, handleChange, errors, resetErrors, isValidName, isValidPhone, isValidEmail } = useFormAndValidation(
+    {}
+  );
+  const [isValid, setIsValid] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
     console.log("submit");
   }
+
+  useEffect(() => {
+    setIsValid(isValidName && isValidPhone && isValidEmail);
+    console.log(isValid);
+  }, [isValidName, isValidPhone, isValidEmail]);
 
   useEffect(() => {
     resetErrors({ name: "", phone: "", email: "" });
@@ -30,8 +38,8 @@ function Form() {
               placeholder="Имя"
               value={values.name || ""}
               onChange={handleChange}
-              minLength="6"
-              maxLength="20"
+              minLength="2"
+              maxLength="30"
               required
             />
             <span className={`${"form__validation-message"} ${errors.name ? "form__validation-message_active" : ""}`}>

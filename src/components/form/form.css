@@ -131,8 +131,18 @@
 
 .form__send-button_disabled {
     background-color: #2FBAE578;
-    ;
 }
+
+.form__send-button_disabled:hover {
+    cursor: default;
+    background-color: #2FBAE578;
+}
+
+.form__send-button_disabled:active {
+    background-color: #2FBAE578;
+    box-shadow: none;
+  }
+
 
 .form__send-button-text {
     font-weight: 500;

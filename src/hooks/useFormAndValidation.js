@@ -4,7 +4,9 @@ import { regularEmail, regularPhone, regularName } from "../utils/consts";
 export function useFormAndValidation() {
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
-  const [isValid, setIsValid] = useState(false);
+  const [isValidName, setIsValidName] = useState(false);
+  const [isValidPhone, setIsValidPhone] = useState(false);
+  const [isValidEmail, setIsValidEmail] = useState(false);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -12,32 +14,30 @@ export function useFormAndValidation() {
     switch (name) {
       case "name":
         if (regularName.test(String(value).toLowerCase())) {
+          setIsValidName(true);
           setErrors({ ...errors, [name]: "" });
-          setIsValid(true);
-          console.log(name);
         } else {
+          setIsValidName(false);
           setErrors({ ...errors, [name]: "некорректное имя" });
-          setIsValid(false);
         }
         break;
 
       case "phone":
         if (regularPhone.test(String(value).toLowerCase())) {
-          setIsValid(true);
+          setIsValidPhone(true);
           setErrors({ ...errors, [name]: "" });
-          console.log(name);
         } else {
-          setIsValid(false);
+          setIsValidPhone(false);
           setErrors({ ...errors, [name]: "некорректный номер телефона" });
         }
         break;
 
       case "email":
         if (regularEmail.test(String(value).toLowerCase())) {
+          setIsValidEmail(true);
           setErrors({ ...errors, [name]: "" });
-          setIsValid(true);
         } else {
-          setIsValid(false);
+          setIsValidEmail(false);
           setErrors({ ...errors, [name]: "некорректный email" });
         }
         break;
@@ -45,25 +45,12 @@ export function useFormAndValidation() {
       default:
         console.log("Error!");
     }
-    // setValues({ ...values, [name]: value });
-    // setErrors({ ...errors, [name]: e.target.validationMessage });
-    // if (name === "name") {
-    //   setIsValid(regularEmail.test(value) && e.target.closest(".form__body").checkValidity());
-    // } else if (name === "email") {
-    //   setIsValid(regularEmail.test(value) && e.target.closest(".form__body").checkValidity());
-    // } else if (name === "phone") {
-    //   setIsValid(regularPhone.test(value) && e.target.closest(".form__body").checkValidity());
-    //   setErrors({ ...errors, [name]: "fewdqwdqdw" });
-    // } else {
-    //   setIsValid(e.target.closest(".form__body").checkValidity());
-    //   setErrors({ ...errors, [name]: "fewdqwdqdw" });
-    // }
   }
 
   function resetErrors(data) {
     setValues(data);
-    setIsValid(false);
+    // setIsValid(false);
   }
 
-  return { values, handleChange, errors, isValid, resetErrors, setValues };
+  return { values, handleChange, errors, resetErrors, setValues, isValidName, isValidPhone, isValidEmail };
 }
