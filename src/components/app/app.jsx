@@ -1,14 +1,9 @@
-import About from "../about/about";
-import Copyright from "../copyright/copyright";
 import Footer from "../footer/footer";
-import Form from "../form/form";
 import Header from "../header/header";
-import Promo from "../promo/promo";
-import Steps from "../steps/steps";
-import Why from "../whyus/why";
 import "./app.css";
-
+import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Main from "../../pages/main";
 
 function App() {
   const [pageWidth, setPageWidth] = useState(document.documentElement.scrollWidth);
@@ -27,13 +22,10 @@ function App() {
   return (
     <div className="App">
       <Header pageWidth={pageWidth} />
-      <Promo />
-      <About pageWidth={pageWidth} />
-      <Steps pageWidth={pageWidth} />
-      <Why />
-      <Form />
+      <Routes>
+        <Route path="/" element={<Main pageWidth={pageWidth} />} />
+      </Routes>
       <Footer />
-      <Copyright />
     </div>
   );
 }
