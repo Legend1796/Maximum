@@ -20,6 +20,9 @@
     border: 1px solid #000000;
     border-top: none;
     padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .form__title-text {
@@ -37,10 +40,12 @@
     color: #23232380;
     border: none;
     border-radius: 5px;
+    outline: none;
+    position: relative;
 }
 
-.form__input:focus {
-    outline: 1px solid #23232399;
+.input__container {
+    position: relative;
 }
 
 .form__input_error {
@@ -53,6 +58,14 @@
     font-size: 16px;
     line-height: 20px;
     color: red;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    display: none;
+}
+
+.form__validation-message_active {
+    display: block;
 }
 
 .form__add {
@@ -114,6 +127,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.form__send-button_disabled {
+    background-color: #2FBAE578;
+    ;
 }
 
 .form__send-button-text {

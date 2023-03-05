@@ -1,20 +1,75 @@
 import "./form.css";
 import checkbox_active from "../../images/checkbox_active.svg";
+import { useFormAndValidation } from "../../hooks/useFormAndValidation";
+import { useEffect } from "react";
 
 function Form() {
+  const { values, handleChange, errors, isValid, resetErrors } = useFormAndValidation({});
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("submit");
+  }
+
+  useEffect(() => {
+    resetErrors({ name: "", phone: "", email: "" });
+  }, []);
   return (
     <section className="form">
       <div className="form__container">
         <div className="form__title">
           <h2 className="form__title-text">Оставьте заявку на импорт</h2>
         </div>
-        <div className="form__body">
-          <input type="text" className="form__input" placeholder="Имя" />
-          <p className="form__validation-message">некорректное имя</p>
-          <input type="text" className="form__input" placeholder="Телефон" />
-          <p className="form__validation-message">некорректный телефон</p>
-          <input type="text" className="form__input" placeholder="Почта" />
-          <p className="form__validation-message">некорректный email</p>
+        <form onSubmit={handleSubmit} name="send" className="form__body">
+          <div className="input__container">
+            <input
+              id="name"
+              name="name"
+              type="text"
+              className={`${"form__input"} ${errors.name ? "form__input_error" : ""}`}
+              placeholder="Имя"
+              value={values.name || ""}
+              onChange={handleChange}
+              minLength="6"
+              maxLength="20"
+              required
+            />
+            <span className={`${"form__validation-message"} ${errors.name ? "form__validation-message_active" : ""}`}>
+              {errors.name}
+            </span>
+          </div>
+          <div className="input__container">
+            <input
+              id="phone"
+              name="phone"
+              type="text"
+              className={`${"form__input"} ${errors.phone ? "form__input_error" : ""}`}
+              placeholder="Телефон"
+              value={values.phone || ""}
+              onChange={handleChange}
+              minLength="10"
+              maxLength="11"
+              required
+            />
+            <span className={`${"form__validation-message"} ${errors.phone ? "form__validation-message_active" : ""}`}>
+              {errors.phone}
+            </span>
+          </div>
+          <div className="input__container">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              className={`${"form__input"} ${errors.email ? "form__input_error" : ""}`}
+              placeholder="Почта"
+              value={values.email || ""}
+              onChange={handleChange}
+              required
+            />
+            <span className={`${"form__validation-message"} ${errors.email ? "form__validation-message_active" : ""}`}>
+              {errors.email}
+            </span>
+          </div>
           <div className="form__add">
             <button className="form__add-file form__add-file_button" type="button">
               <p className="form__add-file-text">Прикрепить файл</p>
@@ -23,7 +78,10 @@ function Form() {
               <p className="form__add-file-text">Файл не прикреплен</p>
             </div>
           </div>
-          <button className="form__send-button" type="submit">
+          <button
+            className={`${"form__send-button"} ${isValid ? "" : "form__send-button_disabled"}`}
+            type="submit"
+            disabled={!isValid}>
             <p className="form__send-button-text">Оставить заявку</p>
           </button>
           <div className="form__agreement">
@@ -35,7 +93,7 @@ function Form() {
               </a>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </section>
   );

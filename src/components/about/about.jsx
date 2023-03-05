@@ -12,7 +12,7 @@ function About({ pageWidth }) {
             грузоперевозок
           </p>
         ) : (
-          <p className="about__text">
+          <div className="about__text">
             <span className="about__text about__text_bold">«Максимум»</span>
             <span className="about__text about__text_semibold">&nbsp;-&nbsp;</span>развивающаяся компания по организации
             <p className="about__text_regular">импорта для промышленных предприятий из Китая, Тайваня,</p>
@@ -20,7 +20,7 @@ function About({ pageWidth }) {
               Южной Кореи, в нашей компании работают профессионалы, имеющие 10 лет опыта работы в сфере международных
               грузоперевозок
             </p>
-          </p>
+          </div>
         )}
 
         <ul className="about__table">
