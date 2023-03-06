@@ -9,10 +9,12 @@ export function useFormAndValidation() {
   const [isValidEmail, setIsValidEmail] = useState(false);
 
   function handleChange(e) {
+    console.log(e);
     const { name, value } = e.target;
     setValues({ ...values, [name]: value });
     switch (name) {
       case "name":
+        console.log("name!");
         if (regularName.test(String(value).toLowerCase())) {
           setIsValidName(true);
           setErrors({ ...errors, [name]: "" });

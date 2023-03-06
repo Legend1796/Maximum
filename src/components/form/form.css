@@ -33,6 +33,22 @@
 }
 
 .form__input {
+    width: 588px;
+    height: 64px;
+    background-color: var(--color-white);
+    color: #23232380;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    position: relative;
+}
+
+.form__text {
+    font-family: "Montserrat" !important;
+    font-size: 50px;
+}
+
+.react-dadata__input {
     padding-left: 15px;
     width: 588px;
     height: 64px;
@@ -42,6 +58,20 @@
     border-radius: 5px;
     outline: none;
     position: relative;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 257%;
+}
+
+.react-dadata__input:focus {
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.form__input_error {
+    outline: 1px solid red;
 }
 
 .form__input-phone {
@@ -53,14 +83,15 @@
     border: none !important;
     border-radius: 5px !important;
     outline: none !important;
+    font-family: 'Montserrat' !important;
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    line-height: 257% !important;
 }
 
 .input__container {
     position: relative;
-}
-
-.form__input_error {
-    outline: 1px solid red;
+    border-radius: 5px;
 }
 
 .form__validation-message {
