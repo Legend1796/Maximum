@@ -44,6 +44,17 @@
     position: relative;
 }
 
+.form__input-phone {
+    padding-left: 48px !important;
+    width: 588px !important;
+    height: 64px !important;
+    background-color: var(--color-white) !important;
+    color: #23232380 !important;
+    border: none !important;
+    border-radius: 5px !important;
+    outline: none !important;
+}
+
 .input__container {
     position: relative;
 }

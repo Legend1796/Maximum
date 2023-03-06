@@ -1,13 +1,16 @@
+import "react-phone-input-2/lib/style.css";
 import "./form.css";
 import checkbox_active from "../../images/checkbox_active.svg";
 import { useFormAndValidation } from "../../hooks/useFormAndValidation";
 import { useEffect, useState } from "react";
+import PhoneInput from "react-phone-input-2";
 
 function Form() {
   const { values, handleChange, errors, resetErrors, isValidName, isValidPhone, isValidEmail } = useFormAndValidation(
     {}
   );
   const [isValid, setIsValid] = useState(false);
+  const [state, setState] = useState();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -46,8 +49,8 @@ function Form() {
               {errors.name}
             </span>
           </div>
-          <div className="input__container">
-            <input
+          <div className="input__container input__container_phone">
+            {/* <input
               id="phone"
               name="phone"
               type="text"
@@ -58,7 +61,8 @@ function Form() {
               minLength="10"
               maxLength="11"
               required
-            />
+            /> */}
+            <PhoneInput inputClass="form__input-phone" country={"ru"} value={state} onChange={(e) => handleChange} />
             <span className={`${"form__validation-message"} ${errors.phone ? "form__validation-message_active" : ""}`}>
               {errors.phone}
             </span>
