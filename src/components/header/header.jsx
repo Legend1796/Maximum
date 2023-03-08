@@ -2,36 +2,35 @@ import "./header.css";
 import logo from "../../images/logo.svg";
 import tg from "../../images/icons/tg.svg";
 import wa from "../../images/icons/wa.svg";
+import { NavLink } from "react-router-dom";
+import { Element } from "react-scroll";
 
 function Header({ pageWidth }) {
   return (
     <header className="header">
       <div className="header__container">
-        <img src={logo} alt="logo" className="header__logo" />
-
-        <nav className="header__navigation">
-          <ul className="header__links">
-            <li className="header__link">
-              <a href="#" className="header__link">
-                Главная
-              </a>
-            </li>
-            <li className="header__link">
-              <a href="#" className="header__link">
-                О компании
-              </a>
-            </li>
+        <Element className="header__logo" name="/">
+          <NavLink className="header__logo" to="/">
+            <img src={logo} alt="logo" className="header__logo" />
+          </NavLink>
+        </Element>
+        <div className="header__navigation">
+          <nav className="header__links">
+            <NavLink className="header__link" to="/">
+              Главная
+            </NavLink>
+            <NavLink className="header__link" to="/">
+              О компании
+            </NavLink>
             {pageWidth > 1430 ? (
-              <li className="header__link">
-                <a href="#" className="header__link">
-                  Этапы работы
-                </a>
-              </li>
+              <NavLink className="header__link" to="/">
+                Этапы работы
+              </NavLink>
             ) : (
               <></>
             )}
-          </ul>
-        </nav>
+          </nav>
+        </div>
 
         <div className="header__contacts">
           <a href="#" className="header__link header__link_wa">
