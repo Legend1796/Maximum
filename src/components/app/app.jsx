@@ -34,7 +34,7 @@ function App() {
         />
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
-      <Footer />
+      <Footer pageWidth={pageWidth} />
       <Copyright />
     </div>
   );
