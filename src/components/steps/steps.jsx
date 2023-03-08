@@ -9,6 +9,7 @@ import step7 from "../../images/steps/step7.svg";
 import step8 from "../../images/steps/step8.svg";
 import road from "../../images/steps/road.svg";
 import roadTab from "../../images/steps/road_tab.svg";
+import roadMobile from "../../images/steps/road_mobile.svg";
 
 function Steps({ pageWidth }) {
   return (
@@ -16,8 +17,10 @@ function Steps({ pageWidth }) {
       <div className="steps__container">
         {pageWidth > 1430 ? (
           <img src={road} alt="road" className="steps__road" />
-        ) : (
+        ) : pageWidth > 768 ? (
           <img src={roadTab} alt="road" className="steps__road" />
+        ) : (
+          <img src={roadMobile} alt="road" className="steps__road" />
         )}
         <h2 className="steps__title">Этапы работы</h2>
         <ul className="steps__grid-table">
