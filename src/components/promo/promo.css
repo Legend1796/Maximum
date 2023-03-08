@@ -77,3 +77,43 @@
         line-height: 257%;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .promo__container {
+        width: 343px;
+        flex-direction: column-reverse;
+    }
+
+    .promo__title {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 19px;
+    }
+
+    .promo__button-text {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 165%;
+    }
+
+    .promo__button {
+        width: 343px;
+    }
+
+    .promo__button-text {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .promo__image {
+        width: 343px;
+        height: 250px;
+    }
+
+    .promo__text {
+        width: 323px;
+        margin-top: 17px;
+        margin-bottom: 24px; 
+    }
+}

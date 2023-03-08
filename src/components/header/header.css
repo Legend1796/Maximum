@@ -44,30 +44,50 @@
     }
 
     .header__links {
-         gap: 27px;
+        gap: 27px;
     }
-
+    
     .header__link {
         height: 40px;
-   }
-
+    }
+    
     .header__image {
         width: 40px;
         height: 40px;
     }
-
+    
     .header__phone {
         font-weight: 300;
         font-size: 16px;
         line-height: 140%;
         margin-left: 9px;
     }
-
+    
     .header__contacts {
         gap: 0;
     }
-
+    
     .header__link_wa {
         margin-right: 16px;
     }
-  }
+}
+
+@media screen and (max-width: 768px) {
+    .header__container {
+        width: 343px;
+    }
+        
+    .header__image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header__logo {
+        width: 157px;
+        height: 32px;
+    }
+
+    .header__modal:hover {
+        background: none;
+    } 
+}

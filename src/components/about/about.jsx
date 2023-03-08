@@ -11,7 +11,7 @@ function About({ pageWidth }) {
             Южной Кореи, в нашей компании работают профессионалы, имеющие 10 лет опыта работы в сфере международных
             грузоперевозок
           </p>
-        ) : (
+        ) : pageWidth > 768 ? (
           <div className="about__text">
             <span className="about__text about__text_bold">«Максимум»</span>
             <span className="about__text about__text_semibold">&nbsp;-&nbsp;</span>развивающаяся компания по организации
@@ -19,6 +19,17 @@ function About({ pageWidth }) {
             <p className="about__text">
               Южной Кореи, в нашей компании работают профессионалы, имеющие 10 лет опыта работы в сфере международных
               грузоперевозок
+            </p>
+          </div>
+        ) : (
+          <div className="about__text">
+            <span className="about__text about__text_bold">«Максимум»</span>
+            <span className="about__text about__text_semibold">&nbsp;-&nbsp;</span>
+            <p className="about__text_regular">развивающаяся компания</p>
+            <p className="about__text_regular">по организации импорта для промышленных предприятий</p>
+            <p className="about__text_regular">
+              из Китая, Тайваня, Южной Кореи, в нашей компании работают профессионалы, имеющие 10 лет опыта работы в
+              сфере международных грузоперевозок
             </p>
           </div>
         )}
