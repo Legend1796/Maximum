@@ -25,3 +25,23 @@
     font-size: 20px;
     line-height: 24px;
 }
+
+.send__text {
+    width: 550px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.send__container {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 1375px;
+    margin: 0 auto;
+}
+
+.send_title {
+    text-align: left;
+}

@@ -53,7 +53,7 @@
     width: 588px;
     height: 64px;
     background-color: var(--color-white);
-    color: #23232380;
+    color: #232323;
     border: none;
     border-radius: 5px;
     outline: none;
@@ -79,7 +79,7 @@
     width: 588px !important;
     height: 64px !important;
     background-color: var(--color-white) !important;
-    color: #23232380 !important;
+    color: #232323 !important;
     border: none !important;
     border-radius: 5px !important;
     outline: none !important;
