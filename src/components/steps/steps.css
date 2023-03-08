@@ -79,17 +79,20 @@
         font-size: 25px;
     }
 
+    .steps__step {
+        width: 222x;
+    }
+
     .steps__step-circle {
-        width: 55px;
-        height: 55px;
+        width: 30px;
+        height: 30px;
         border-radius: 30px;
     }
 
     .steps__grid-table {
-        margin-top: 16px;
-        column-gap: 6px;
-        /* row-gap: 0px; */
-        row-gap: 150px;
+        margin-top: 13px;
+        column-gap: 12px;
+        row-gap: 107px;
     }
 
     .steps__step-text {
@@ -97,14 +100,21 @@
         margin-left: 16px;
         font-weight: 400;
         font-size: 14px;
-        line-height: 142%;
-        margin-left: 8px;
+        line-height: 17px;
+        margin-left: 5px;
+        width: 105px;
+    }
+    
+    .steps__number {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 165%;
     }
 
     .steps__image {
         margin-top: 14px;
-        width: 171px;
-        height: 171px;
+        width: 170px;
+        height: 170px;
     }
 
     .steps__step {
@@ -112,10 +122,10 @@
     }
 
     .steps__road {
-        width: 693px;
-        height: 503px;
-        bottom: 80px;
-        left: -11px;
+        width: 649px;
+        height: 507px;
+        bottom: 9px;
+        left: 14px;
         z-index: -1;
     }
 }

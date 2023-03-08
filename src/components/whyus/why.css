@@ -49,3 +49,49 @@
     line-height: 24px;
     color: var(--color-grey);
 }
+
+@media screen and (max-width: 1430px) {
+    .container {
+        margin: 80px auto;
+        width: 720px;
+    }
+
+    .why__title {
+        margin-bottom: 14px;
+        margin-left: 0;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 165%;
+    }
+
+    .why__item-title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 150%;
+    }
+
+    .why__item-title::before {
+        font-weight: 900;
+        font-size: 37px;
+        line-height: 20px;
+        margin-right: 12px;
+        margin-bottom: 20px;
+        
+    }
+
+    .why__item-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        width: 226px;
+    }
+    
+    .why__item {
+        width: 231px;
+    }
+
+    .why__item:nth-child(2) {
+        width: 207px;
+    }
+    
+}
