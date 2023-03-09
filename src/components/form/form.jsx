@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { FioSuggestions, EmailSuggestions } from "react-dadata";
 import "./form.css";
 
-function Form() {
+function Form({ pageWidth }) {
   const [isValid, setIsValid] = useState(false);
   const [email, setEmail] = useState();
   const [name, setName] = useState();
@@ -99,10 +99,21 @@ function Form() {
           <div className="form__agreement">
             <div className="form__agreement-text-box">
               <img src={checkbox_active} alt="checkbox" className="form__checkbox" />
-              <p className="form__agreement-text">Я принимаю условия&nbsp;</p>
-              <a href="#" className="form__agreement-text-link">
-                пользовательского соглашения
-              </a>
+              {pageWidth > 768 ? (
+                <>
+                  <p className="form__agreement-text">Я принимаю условия&nbsp;</p>
+                  <a href="#" className="form__agreement-text-link">
+                    пользовательского соглашения
+                  </a>
+                </>
+              ) : (
+                <div classname="form__agreement-text_mobile">
+                  <p className="form__agreement-text">Я принимаю условия&nbsp;</p>
+                  <a href="#" className="form__agreement-text-link">
+                    пользовательского соглашения
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         </form>

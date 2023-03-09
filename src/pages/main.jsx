@@ -11,7 +11,7 @@ function Main({ pageWidth }) {
       <About pageWidth={pageWidth} />
       <Steps pageWidth={pageWidth} />
       <Why />
-      <Form />
+      <Form pageWidth={pageWidth} />
     </div>
   );
 }

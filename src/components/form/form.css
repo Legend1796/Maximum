@@ -32,17 +32,6 @@
     color: #fff;
 }
 
-.form__input {
-    width: 588px;
-    height: 64px;
-    background-color: var(--color-white);
-    color: #23232380;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    position: relative;
-}
-
 .form__text {
     font-family: "Montserrat" !important;
     font-size: 50px;
@@ -93,7 +82,7 @@
     position: relative;
     border-radius: 5px;
 }
-
+/* 
 .form__validation-message {
     text-align: left;
     font-weight: 400;
@@ -108,7 +97,7 @@
 
 .form__validation-message_active {
     display: block;
-}
+} */
 
 .form__add {
     margin: 48px auto;
@@ -198,5 +187,87 @@
         font-weight: 600;
         font-size: 25px;
         line-height: 165%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form__container {
+        width: 342px;
+    }
+
+    .input__container {
+        /* padding-left: 15px; */
+        width: 100%;
+        height: 68px;
+    }
+
+    .form__title-text {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 257%;
+    }
+    
+
+    .form__input-phone {
+        width: 100% !important;
+        height: 68px !important;
+    }
+    
+    .react-dadata__input {
+        padding-left: 25px;
+        width: 100%;
+        height: 68px;
+    }
+
+    .form__body {
+        border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 12px;
+        padding: 26px 17px;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .form__add {
+        height: 64px;
+        margin: 0 auto;
+    }
+
+    .form__add-file-text {
+        font-size: 12px;
+        line-height: 257%;
+    }
+
+    .form__send-button {
+        width: 343px;
+    }
+
+    .form__send-button-text {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 257%;
+    }
+
+    .form__agreement {
+        width: 281px;
+    }   
+
+    .form__agreement-text-box {
+        justify-content: flex-start;
+        line-height: 147%;
+        margin-top: -4px;
+        gap: 0;
+        text-align: left;
+    }
+    
+    .form__agreement-text_mobile {
+        width: 255px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+    }
+
+    .form__checkbox {
+        margin-right: 11px;
     }
 }

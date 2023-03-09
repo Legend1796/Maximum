@@ -96,8 +96,6 @@
     }
 
     .steps__step-text {
-        width: 108px;
-        margin-left: 16px;
         font-weight: 400;
         font-size: 14px;
         line-height: 17px;
@@ -126,14 +124,61 @@
         height: 507px;
         bottom: 9px;
         left: 14px;
-        z-index: -1;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .steps__grid-table {
-        margin-top: 37px;
-        grid-template-columns: repeat(1, 1fr);
-        row-gap: 44px;
+    .steps__container {
+        width: 330px;
     }
+
+    .steps__grid-table {
+        margin-top: 15px;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 31px;
+        margin-left: 14px;
+    }
+
+    .steps__step-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+    }
+
+    .steps__road {
+        width: 343.54px;
+        height: 2463.7px;
+        bottom: 388px;
+        left: 0;
+        
+    }
+
+    .steps__step {
+        width: 306px;
+    }
+
+    .steps__number {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 61px;
+    }
+
+    .steps__step-text {
+        margin-left: 16px;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 165%;
+        width: 194px;
+    }
+
+    .steps__image {
+        margin-top: 8px;
+        width: auto;
+        height: auto;
+        
+    }
+
+
 }
+
+
