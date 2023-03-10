@@ -11,13 +11,19 @@ function Form({ pageWidth }) {
   const [email, setEmail] = useState();
   const [name, setName] = useState();
   const [phone, setPhone] = useState("");
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [uploaded, setUploaded] = useState();
+  //   const [selectedFiles, setSelectedFiles] = useState();
 
   function handleSubmit(e) {
     e.preventDefault();
     console.log("submit");
   }
-  function handleChange(changed) {
-    console.log(changed);
+
+  function handleChangeFiles(e) {
+    console.log(e.target.files);
+    // selectedFiles(e.target.files.length);
+    setSelectedFile(e.target.files.length);
   }
 
   useEffect(() => {
@@ -66,7 +72,7 @@ function Form({ pageWidth }) {
               type="text"
               inputClass="form__input-phone"
               buttonClass="form__input-phone-button"
-              //   country={"ru"}
+              country={"ru"}
               value={phone}
               onChange={setPhone}
             />
@@ -90,10 +96,19 @@ function Form({ pageWidth }) {
           </div>
           <div className="form__add">
             <button className="form__add-file form__add-file_button" type="button">
+              <input
+                className="form__add-file-input"
+                type="file"
+                multiple
+                onChange={handleChangeFiles}
+                accept="image/*, .pdf"
+              />
               <p className="form__add-file-text">Прикрепить файл</p>
             </button>
             <div className="form__add-file">
-              <p className="form__add-file-text">Файл не прикреплен</p>
+              <p className="form__add-file-text">
+                {selectedFile ? `Прикреплено файлов: ${selectedFile}` : "Файл не прикреплен"}
+              </p>
             </div>
           </div>
           <button
