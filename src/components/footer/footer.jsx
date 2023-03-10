@@ -11,7 +11,7 @@ function Footer({ pageWidth }) {
     <section className="footer">
       <div className="footer__container">
         <a href="#" className="footer__social">
-          {pageWidth > 1430 ? (
+          {pageWidth > 1430 || pageWidth < 768 ? (
             <img src={tg} alt="telegram" className="footer__icon" />
           ) : (
             <img src={tg_tablet} alt="telegram" className="footer__icon" />
@@ -20,7 +20,7 @@ function Footer({ pageWidth }) {
           <p className="footer__social-text">@maximum_log</p>
         </a>
         <a href="#" className="footer__social">
-          {pageWidth > 1430 ? (
+          {pageWidth > 1430 || pageWidth < 768 ? (
             <img src={wa} alt="watsApp" className="footer__icon" />
           ) : (
             <img src={wa_tablet} alt="watsApp" className="footer__icon" />

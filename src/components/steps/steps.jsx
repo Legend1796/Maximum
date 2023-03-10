@@ -13,7 +13,7 @@ import roadMobile from "../../images/steps/road_mobile.svg";
 
 function Steps({ pageWidth }) {
   return (
-    <section className="steps">
+    <section className="steps" id="steps">
       <div className="steps__container">
         {pageWidth > 1430 ? (
           <img src={road} alt="road" className="steps__road" />

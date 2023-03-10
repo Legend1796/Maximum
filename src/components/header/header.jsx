@@ -7,8 +7,16 @@ import { Element } from "react-scroll";
 import tg_tablet from "../../images/icons/tg_tablet.svg";
 import wa_tablet from "../../images/icons/wa_tablet.svg";
 import headerMobileNav from "../../images/header_mobile_nav.svg";
+import { useState } from "react";
+import { Link } from "react-scroll";
 
 function Header({ pageWidth }) {
+  const [modal, setModal] = useState(false);
+
+  function handleToggleModal() {
+    setModal(!modal);
+  }
+
   return (
     <header className="header">
       {pageWidth > 768 ? (
@@ -23,13 +31,13 @@ function Header({ pageWidth }) {
               <NavLink className="header__link" to="/">
                 Главная
               </NavLink>
-              <NavLink className="header__link" to="/">
+              <Link className="header__link" to="about" spy={true} smooth={true} offset={-50} duration={400}>
                 О компании
-              </NavLink>
+              </Link>
               {pageWidth > 1430 ? (
-                <NavLink className="header__link" to="/">
+                <Link className="header__link" to="steps" spy={true} smooth={true} duration={500}>
                   Этапы работы
-                </NavLink>
+                </Link>
               ) : (
                 <></>
               )}
@@ -61,9 +69,36 @@ function Header({ pageWidth }) {
               <img src={wa_tablet} alt="watsApp" className="header__image" />
             </a>
           </div>
-          <button type="button" className="header__modal">
+          <button type="button" className="header__modal-button" onClick={handleToggleModal}>
             <img src={headerMobileNav} alt="open modal navigation" className="header__modal-image" />
           </button>
+          {modal && (
+            <div className="header__modal">
+              <nav className="header__links header__links_modal">
+                <NavLink className="header__link header__link_modal" to="/">
+                  Главная
+                </NavLink>
+                <Link
+                  className="header__link header__link_modal"
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={600}>
+                  О компании
+                </Link>
+                <Link
+                  className="header__link header__link_modal"
+                  to="steps"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={1000}>
+                  Этапы работы
+                </Link>
+              </nav>
+            </div>
+          )}
         </div>
       )}
     </header>

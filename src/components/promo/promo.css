@@ -30,6 +30,7 @@
     background-color: var(--color-blue);
     border: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .promo__button-text {

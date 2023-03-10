@@ -4,6 +4,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+}
+
+.header__modal {
+    width: 181px;
+    position: absolute;
+    right: 0;
+    top: 44px;
+    padding: 20px 24px;
+    background-color: var(--color-blue);
 }
 
 .header__links {
@@ -22,6 +32,12 @@
     font-size: 16px;
     line-height: 140%;
     color: var(--color-black);
+}
+
+.header__link_modal {
+    color: var(--color-white);
+    font-size: 18px;
+    line-height: 165%;
 }
 
 .header__contacts {
@@ -87,7 +103,17 @@
         height: 32px;
     }
 
-    .header__modal:hover {
+    .header__modal-button:hover {
         background: none;
-    } 
+    }
+
+    .header__links {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .header__link {
+        height: 30px;
+    }
 }

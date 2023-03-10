@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import Main from "../../pages/main";
 import NotFound from "../../pages/notFound";
 import Send from "../../pages/send";
+import ScrollToTop from "../scroll-to-top/scroll-to-top";
 
 function App() {
   const [pageWidth, setPageWidth] = useState(document.documentElement.scrollWidth);
@@ -25,6 +26,7 @@ function App() {
   return (
     <div className="App">
       <Header pageWidth={pageWidth} />
+      <ScrollToTop height={0} />
       <Routes>
         <Route exact path="/" element={<Main pageWidth={pageWidth} />} />
         <Route exact path="/send" element={<Send />} />

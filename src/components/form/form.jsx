@@ -52,15 +52,21 @@ function Form({ pageWidth }) {
           </div>
           <div className="input__container input__container_phone">
             <PhoneInput
+              inputProps={{
+                name: "phone",
+                required: true,
+                autoFocus: true,
+                placeholder: "Телефон",
+              }}
               disableDropdown
               disableSearchIcon
               enableAreaCodes={false}
               onlyCountries={["ru"]}
               id="phone"
-              name="phone"
               type="text"
               inputClass="form__input-phone"
-              country={"ru"}
+              buttonClass="form__input-phone-button"
+              //   country={"ru"}
               value={phone}
               onChange={setPhone}
             />
@@ -107,7 +113,7 @@ function Form({ pageWidth }) {
                   </a>
                 </>
               ) : (
-                <div classname="form__agreement-text_mobile">
+                <div className="form__agreement-text_mobile">
                   <p className="form__agreement-text">Я принимаю условия&nbsp;</p>
                   <a href="#" className="form__agreement-text-link">
                     пользовательского соглашения

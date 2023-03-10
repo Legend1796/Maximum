@@ -64,7 +64,7 @@
 }
 
 .form__input-phone {
-    padding-left: 48px !important;
+    padding-left: 18px !important;
     width: 588px !important;
     height: 64px !important;
     background-color: var(--color-white) !important;
@@ -76,6 +76,10 @@
     font-weight: 400 !important;
     font-size: 20px !important;
     line-height: 257% !important;
+}
+
+.form__input-phone-button {
+    display: none !important;
 }
 
 .input__container {

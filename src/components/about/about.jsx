@@ -2,7 +2,7 @@ import "./about.css";
 
 function About({ pageWidth }) {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="about__container">
         <h2 className="about__title">О компании</h2>
         {pageWidth > 1430 ? (
