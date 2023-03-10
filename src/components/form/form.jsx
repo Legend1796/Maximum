@@ -2,6 +2,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "react-dadata/dist/react-dadata.css";
 import checkbox_active from "../../images/checkbox_active.svg";
+import checkbox_inactive from "../../images/checkbox_inactive.svg";
 import { useEffect, useState } from "react";
 import { FioSuggestions, EmailSuggestions } from "react-dadata";
 import "./form.css";
@@ -13,6 +14,7 @@ function Form({ pageWidth }) {
   const [phone, setPhone] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploaded, setUploaded] = useState();
+  const [checked, setChecked] = useState(false);
   //   const [selectedFiles, setSelectedFiles] = useState();
 
   function handleSubmit(e) {
@@ -22,15 +24,14 @@ function Form({ pageWidth }) {
 
   function handleChangeFiles(e) {
     console.log(e.target.files);
-    // selectedFiles(e.target.files.length);
     setSelectedFile(e.target.files.length);
   }
 
   useEffect(() => {
     if (email && name) {
-      setIsValid(email.value && phone && name.value);
+      setIsValid(email.value && phone && name.value && checked);
     }
-  }, [name, email, phone]);
+  }, [name, email, phone, checked]);
 
   return (
     <section className="form">
@@ -119,7 +120,9 @@ function Form({ pageWidth }) {
           </button>
           <div className="form__agreement">
             <div className="form__agreement-text-box">
-              <img src={checkbox_active} alt="checkbox" className="form__checkbox" />
+              <button className="form__checkbox-button" type="button" onClick={() => setChecked(!checked)}>
+                <img src={checked ? checkbox_active : checkbox_inactive} alt="checkbox" className="form__checkbox" />
+              </button>
               {pageWidth > 768 ? (
                 <>
                   <p className="form__agreement-text">Я принимаю условия&nbsp;</p>

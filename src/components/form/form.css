@@ -142,6 +142,21 @@
     cursor: pointer;
 }
 
+.form__checkbox-button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.form__checkbox-button:hover {
+    background: none;
+}
+
+.form__checkbox-button:active {
+    background: none;
+    box-shadow: none;
+}
+
 .form__agreement-text-link {
     text-decoration: none;
     color: var(--color-blue);
