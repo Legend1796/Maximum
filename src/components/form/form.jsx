@@ -102,7 +102,7 @@ function Form({ pageWidth }) {
                 type="file"
                 multiple
                 onChange={handleChangeFiles}
-                accept="image/*, .pdf"
+                accept="image/*, .pdf, .xlsx, .xls, .png, .jpg, .doc, .docx"
               />
               <p className="form__add-file-text">Прикрепить файл</p>
             </button>
