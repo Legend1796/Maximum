@@ -12,7 +12,7 @@ function Copyright() {
             политики конфиденциальности&nbsp;
           </a>
           и даете&nbsp;
-          <a href="/policy" className="copyright__link">
+          <a href="/personal-data" className="copyright__link">
             согласие на обработку персональных данных
           </a>
         </div>
