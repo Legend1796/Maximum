@@ -1,5 +1,5 @@
 .copyright__container {
-    width: 1375px;
+    width: 380px;
     margin: 0 auto 60px;
     display: flex;
     flex-direction: column;
@@ -17,13 +17,7 @@
     line-height: 22px;
 }
 
-@media screen and (max-width: 1430px) {
-    .copyright__container {
-        width: 380px;
-    }
-}
-
-@media screen and (max-width: 1430px) {
+@media screen and (max-width: 768px) {
     .copyright__container {
         width: 300px;
     }
