@@ -8,6 +8,8 @@ import Main from "../../pages/main";
 import NotFound from "../../pages/notFound";
 import Send from "../../pages/send";
 import ScrollToTop from "../scroll-to-top/scroll-to-top";
+import Policy from "../../pages/policy";
+import PersonalData from "../../pages/personal-data";
 
 function App() {
   const [pageWidth, setPageWidth] = useState(document.documentElement.scrollWidth);
@@ -30,10 +32,12 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Main pageWidth={pageWidth} />} />
         <Route exact path="/send" element={<Send />} />
-        <Route
+        <Route exact path="/policy" element={<Policy />} />
+        <Route exact path="/personal-data" element={<PersonalData />} />
+        {/* <Route
           path={!location === "/notfound" || "/denied" || "/sucsess"}
           element={<Navigate replace exact path="/" />}
-        />
+        /> */}
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer pageWidth={pageWidth} />

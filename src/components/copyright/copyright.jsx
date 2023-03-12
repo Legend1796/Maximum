@@ -6,12 +6,16 @@ function Copyright() {
     <section className="copyright">
       <div className="copyright__container">
         <img src={logo} alt="logo" className="copyright__logo" />
-        <a href="#" className="copyright__link">
-          Пользовательское соглашение
-        </a>
-        <a href="#" className="copyright__link">
-          Отказ от оферты
-        </a>
+        <div className="copyright__policy">
+          Пользуясь сайтом , вы соглашаетесь с условиями&nbsp;
+          <a href="/policy" className="copyright__link">
+            политики конфиденциальности&nbsp;
+          </a>
+          и даете&nbsp;
+          <a href="/policy" className="copyright__link">
+            согласие на обработку персональных данных
+          </a>
+        </div>
       </div>
     </section>
   );

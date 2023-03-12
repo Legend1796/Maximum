@@ -19,6 +19,12 @@
 
 @media screen and (max-width: 1430px) {
     .copyright__container {
+        width: 380px;
+    }
+}
+
+@media screen and (max-width: 1430px) {
+    .copyright__container {
         width: 300px;
     }
 }
