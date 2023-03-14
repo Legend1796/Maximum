@@ -10,7 +10,7 @@ function Footer({ pageWidth }) {
   return (
     <section className="footer">
       <div className="footer__container">
-        <a href="#" className="footer__social">
+        <a href="tg://resolve?domain=maximum_import" className="footer__social">
           {pageWidth > 1430 || pageWidth < 768 ? (
             <img src={tg} alt="telegram" className="footer__icon" />
           ) : (
@@ -19,7 +19,7 @@ function Footer({ pageWidth }) {
 
           <p className="footer__social-text">@maximum_log</p>
         </a>
-        <a href="#" className="footer__social">
+        <a href="https://wa.me/79995241046" className="footer__social">
           {pageWidth > 1430 || pageWidth < 768 ? (
             <img src={wa} alt="watsApp" className="footer__icon" />
           ) : (
@@ -27,17 +27,17 @@ function Footer({ pageWidth }) {
           )}
           <p className="footer__social-text">+7 (812) 200 46 43</p>
         </a>
-        <a href="#" className="footer__social">
+        <a href="mailto:order@maximum-logistics.ru" className="footer__social">
           <img src={mail} alt="mail" className="footer__icon" />
           <p className="footer__social-text">info@max-imum.ru</p>
         </a>
-        <a href="#" className="footer__social">
+        <div className="footer__social">
           <img src={geo} alt="geo" className="footer__icon" />
           <p className="footer__social-text">
             Санкт-Петербург, <br />
             ул. Ольги Берггольц, д 36, офис 1
           </p>
-        </a>
+        </div>
       </div>
     </section>
   );

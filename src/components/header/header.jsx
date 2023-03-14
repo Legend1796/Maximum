@@ -48,7 +48,7 @@ function Header({ pageWidth }) {
             <a href="tg://resolve?domain=maximum_import" className="header__link header__link_wa">
               <img src={tg} alt="telegram" className="header__image" />
             </a>
-            <a href="https://wa.me/79995241046" className="header__link" target="_blank">
+            <a href="https://wa.me/79995241046" className="header__link">
               <img src={wa} alt="watsApp" className="header__image" />
             </a>
             <p className="header__phone">+7 (812) 200 46 43</p>
@@ -62,10 +62,10 @@ function Header({ pageWidth }) {
             </NavLink>
           </Element>
           <div className="header__contacts">
-            <a href="#" className="header__link header__link_wa">
+            <a href="tg://resolve?domain=maximum_import" className="header__link header__link_wa">
               <img src={tg_tablet} alt="telegram" className="header__image" />
             </a>
-            <a href="#" className="header__link">
+            <a href="https://wa.me/79995241046" className="header__link">
               <img src={wa_tablet} alt="watsApp" className="header__image" />
             </a>
           </div>
