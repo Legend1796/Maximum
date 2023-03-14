@@ -18,7 +18,7 @@ function Form({ pageWidth }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("submit");
+    console.log(phone.length > 10);
   }
 
   function handleChangeFiles(e) {
@@ -28,7 +28,7 @@ function Form({ pageWidth }) {
 
   useEffect(() => {
     if (email && name) {
-      setIsValid(email.value && phone && name.value && checked);
+      setIsValid(email.value && phone.length > 10 && name.value && checked);
     }
   }, [name, email, phone, checked]);
 
