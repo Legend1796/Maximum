@@ -6,6 +6,7 @@ import checkbox_inactive from "../../images/checkbox_inactive.svg";
 import { useEffect, useState } from "react";
 import { FioSuggestions, EmailSuggestions } from "react-dadata";
 import "./form.css";
+import { Link } from "react-router-dom";
 
 function Form({ pageWidth }) {
   const [isValid, setIsValid] = useState(false);
@@ -13,9 +14,7 @@ function Form({ pageWidth }) {
   const [name, setName] = useState();
   const [phone, setPhone] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
-  const [uploaded, setUploaded] = useState();
-  const [checked, setChecked] = useState(false);
-  //   const [selectedFiles, setSelectedFiles] = useState();
+  const [checked, setChecked] = useState(true);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -125,17 +124,17 @@ function Form({ pageWidth }) {
               </button>
               {pageWidth > 768 ? (
                 <>
-                  <p className="form__agreement-text">Я принимаю условия&nbsp;</p>
-                  <a href="#" className="form__agreement-text-link">
-                    пользовательского соглашения
-                  </a>
+                  <p className="form__agreement-text">Я даю согласие на&nbsp;</p>
+                  <Link to="/personal-data" className="form__agreement-text-link">
+                    обработку персональных данных
+                  </Link>
                 </>
               ) : (
                 <div className="form__agreement-text_mobile">
-                  <p className="form__agreement-text">Я принимаю условия&nbsp;</p>
-                  <a href="#" className="form__agreement-text-link">
-                    пользовательского соглашения
-                  </a>
+                  <p className="form__agreement-text">Я даю согласие на&nbsp;</p>
+                  <Link to="/personal-data" className="form__agreement-text-link">
+                    обработку персональных данных
+                  </Link>
                 </div>
               )}
             </div>

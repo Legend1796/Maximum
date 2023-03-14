@@ -1,5 +1,6 @@
 import "./copyright.css";
 import logo from "../../images/logo.svg";
+import { Link } from "react-router-dom";
 
 function Copyright() {
   return (
@@ -8,13 +9,13 @@ function Copyright() {
         <img src={logo} alt="logo" className="copyright__logo" />
         <div className="copyright__policy">
           Пользуясь сайтом , вы соглашаетесь с условиями&nbsp;
-          <a href="/policy" className="copyright__link">
+          <Link to="/policy" className="copyright__link">
             политики конфиденциальности&nbsp;
-          </a>
+          </Link>
           и даете&nbsp;
-          <a href="/personal-data" className="copyright__link">
+          <Link to="/personal-data" className="copyright__link">
             согласие на обработку персональных данных
-          </a>
+          </Link>
         </div>
       </div>
     </section>
