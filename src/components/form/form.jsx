@@ -14,16 +14,47 @@ function Form({ pageWidth }) {
   const [name, setName] = useState();
   const [phone, setPhone] = useState("");
   const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedFileCount, setSelectedFileCount] = useState(null);
   const [checked, setChecked] = useState(true);
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(phone.length > 10);
+    console.log("name: ", name.value, "email: ", email.value, "phone: ", phone, "selectedFile: ", selectedFile);
+
+    var xhr = new XMLHttpRequest();
+    // get a callback when the server responds
+    xhr.addEventListener("load", () => {
+      console.log(xhr.responseText);
+      // update the response state and the step
+
+      //   this.setState({
+      //     emailStatus: xhr.responseText,
+      //   });
+    });
+    // open the request with the verb and the url
+    xhr.open(
+      "GET",
+      "http://f0792652.xsph.ru/sendemail/index.php?sendto=m_igor97@mail.ru&email=" +
+        email.value +
+        "&name=" +
+        name.value +
+        "&phone=" +
+        phone
+    );
+    // send the request
+    xhr.send();
+
+    // reset the fields
+    // this.setState({
+    //   name: "",
+    //   email: "",
+    //   message: "",
+    // });
   }
 
   function handleChangeFiles(e) {
-    console.log(e.target.files);
-    setSelectedFile(e.target.files.length);
+    setSelectedFileCount(e.target.files.length);
+    setSelectedFile(e.target.files);
   }
 
   useEffect(() => {
@@ -107,7 +138,7 @@ function Form({ pageWidth }) {
             </button>
             <div className="form__add-file">
               <p className="form__add-file-text">
-                {selectedFile ? `Прикреплено файлов: ${selectedFile}` : "Файл не прикреплен"}
+                {selectedFile ? `Прикреплено файлов: ${selectedFileCount}` : "Файл не прикреплен"}
               </p>
             </div>
           </div>
