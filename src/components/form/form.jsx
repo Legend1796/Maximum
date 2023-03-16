@@ -18,7 +18,28 @@ function Form({ pageWidth }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(phone.length > 10);
+    let formData = new FormData();
+    formData.append("name", name.value);
+    formData.append("email", email.value);
+    formData.append("phone", phone);
+    fetch(
+      "http://f0792652.xsph.ru/send.php",
+      {
+        method: "POST",
+        body: formData,
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+      //   { mode: "no-cors" }
+    ).then((response) => {
+      response
+        .json()
+        .then((data) => {
+          console.log("Successful" + data);
+        })
+        .catch((error) => console.log(error));
+    });
   }
 
   function handleChangeFiles(e) {
