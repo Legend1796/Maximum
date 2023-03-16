@@ -1,5 +1,8 @@
 <?php
-headers("Access-Control-Allow-Origin: *");
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
+header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorization, X- 
+Request-With');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
@@ -25,7 +28,7 @@ if($name && $message && $email){
         // SMTP server configuration
         $mail->isSMTP();    
         $mail->CharSet = "UTF-8";                                  // Send using SMTP
-        $mail->setLanguage('ru', 'phpmailer/language/directory/');
+        $mail->setLanguage('ru', 'phpmailer/language/phpmailer.lang-ru.php');
         $mail->Host       = 'smtp.gmail.com';                // Set the SMTP server to send through
         $mail->SMTPAuth   = true;                             // Enable SMTP authentication
         $mail->Username   = 'manukhovigor@gmail.com';         // SMTP username

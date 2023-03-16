@@ -21,35 +21,38 @@ function Form({ pageWidth }) {
     e.preventDefault();
     console.log("name: ", name.value, "email: ", email.value, "phone: ", phone, "selectedFile: ", selectedFile);
 
-    var xhr = new XMLHttpRequest();
-    // get a callback when the server responds
-    xhr.addEventListener("load", () => {
-      console.log(xhr.responseText);
-      // update the response state and the step
-
-      //   this.setState({
-      //     emailStatus: xhr.responseText,
-      //   });
-    });
-    // open the request with the verb and the url
-    xhr.open(
-      "GET",
-      "http://f0792652.xsph.ru/sendemail/index.php?sendto=m_igor97@mail.ru&email=" +
-        email.value +
-        "&name=" +
-        name.value +
-        "&phone=" +
-        phone
-    );
-    // send the request
-    xhr.send();
-
-    // reset the fields
-    // this.setState({
-    //   name: "",
-    //   email: "",
-    //   message: "",
+    // var xhr = new XMLHttpRequest();
+    // xhr.addEventListener("load", () => {
+    //   console.log(xhr.responseText);
     // });
+    // xhr.open(
+    //   "GET",
+    //   "http://f0792652.xsph.ru/sendemail/index.php?sendto=m_igor97@mail.ru&email=" +
+    //     email.value +
+    //     "&name=" +
+    //     name.value +
+    //     "&phone=" +
+    //     phone
+    // );
+    // xhr.send();
+    let formData = new FormData();
+    formData.append("name", name.value);
+    formData.append("email", email.value);
+    formData.append("phone", phone);
+    fetch("send.php", {
+      method: "POST",
+      body: formData,
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    }).then((response) => {
+      response
+        .json()
+        .then((data) => {
+          console.log("Successful" + data);
+        })
+        .catch((error) => console.log(error));
+    });
   }
 
   function handleChangeFiles(e) {
